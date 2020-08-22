@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>John Grinalds</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel='icon' href='lighthouse.jpg'>
+
+    <style>
+      html {
+        border: 5px solid black;
+        padding: 0px;
+      }
+
+      body {
+        font-family: 'Raleway', sans-serif;
+      }
+
+      #logo {
+        height: 50px;
+        position: absolute;
+        top: 60px;
+        left: 100px;
+        border: 1px solid white;
+        padding: 5px;
+        transition-duration: 0.5s;
+      }
+
+      #logo:hover {
+        height: 57px;
+      }
+
+      #hero {
+       max-width: 100%;
+       height: auto; 
+      }
+
+      #site-nav {
+        position: absolute;
+        top: 50px;
+        right: 75px;
+        color: white;
+        list-style-type: none;
+        border: 1px solid white;
+        padding: 15px;
+
+      }
+
+      #nav-item { 
+        display: inline;
+        margin: 10px;
+      }
+
+      li:hover {
+        text-decoration: underline white;
+      }
+
+      div {
+        margin: auto;
+        width: 65%;
+      }
+
+      }
+
+      h3 {
+        margin-top: 40px;
+      }
+
+      h5 {
+        color:rgb(9, 85, 136);
+      }
+
+      .section {
+        text-align: center;
+        margin: 30px 0px;
+        padding: 50px;
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+      }
+
+      .email-button {
+        border: 2px solid black;
+        color: black;
+        font-style: italic;
+        border-radius: 7px;
+        padding: 8px;
+        font-size: .5em;
+        margin-left: 30px;
+        transition-duration: 0.5s;
+      }
+
+      .email-button:hover {
+        font-size: .58em;
+        color: rgb(9, 85, 136);
+        border-color: rgb(9, 85, 136);
+      }
+
+      .email-button:link {
+        text-decoration: none;
+        
+      }
+
+      footer {
+        text-align:center;
+        margin: 70px 0px;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+
+
+      <img id = "logo" src="hatteras.jpg">
+
+
+
+      <ul id = "site-nav">
+        <li id = "nav-item"> Development</li>
+        <li id = "nav-item">Interests</li>
+        <li id = "nav-item">Contact</li>
+      </ul>
+      <img id = "hero" src = "profile.jpg">
+
+      <div>
+        <h1 class = "section"> Hello, my name is John. I am a Data Engineer living in Cincinnati, OH</h1>
+
+        <h3>About:</h3>
+
+        <p>
+          Currently, I am working at Procter & Gamble as a Data Engineer in Edge Computing and Predictive Analytics. 
+          My passion is for making, leading, and learning. See my work experience on LinkedIn. Outside of work, I have a
+          beautiful fiance and wonderful friends. My side projects include freelance work for Complete Human Performance,
+          an ad-muter for Spotify, and a Rental-Car calculator. Don't hesitate to reach out with inquiries or
+          if you just want to meet up and talk.
+        </p>
+
+        <h3>Services:</h3>
+
+        <h5>Data Engineering</h5>
+
+        <p>Extract Transform Load, data cleaning, data preparation, data storage and retrieval</p>
+
+        <h5>Data Science</h5>
+
+        <p>Business understanding and requirements, exploratory data anlysis, data preparation and modeling, evaluation, and deployment</p>
+
+        <h5>Web Development</h5>
+
+        <p>UX, front-end development</p>
+  
+      </div>
+
+      <div>
+      <h1 class = "section">Interested in working together?
+        <a class = "email-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = '_blank'>Email Me &#8594</a>
+      </h1>
+      </div>
+
+      <footer>
+        <p>Copyright &#169 <span id="date"></span> John Grinalds</p>
+      </footer>
+
+      <script>
+        var d = new Date();
+        dateEl = document.getElementById("date");
+        dateEl.innerHTML = d.getFullYear();
+      </script>
+      
+ </body>
+</html>
