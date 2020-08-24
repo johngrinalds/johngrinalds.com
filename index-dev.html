@@ -20,15 +20,15 @@
       #logo {
         height: 50px;
         position: absolute;
-        top: 65px;
-        left: 100px;
+        top: 50px;
+        left: 8%;
         border: 1px solid white;
         padding: 5px;
-        transition-duration: 0.5s;
+        transition-duration: 0.4s;
       }
 
       #logo:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
       }
 
       #hero {
@@ -38,8 +38,8 @@
 
       #site-nav {
         position: absolute;
-        top: 50px;
-        right: 75px;
+        top: 35px;
+        right: 6%;
         color: white;
         list-style-type: none;
         border: 1px solid white;
@@ -61,7 +61,6 @@
         width: 65%;
       }
 
-      }
 
       h3 {
         margin-top: 40px;
@@ -79,7 +78,7 @@
         border-top: 3px solid black;
       }
 
-      .email-button {
+      #email-button {
         border: 2px solid black;
         color: black;
         font-style: italic;
@@ -90,13 +89,13 @@
         transition-duration: 0.5s;
       }
 
-      .email-button:hover {
+      #email-button:hover {
         font-size: .58em;
         color: rgb(9, 85, 136);
         border-color: rgb(9, 85, 136);
       }
 
-      .email-button:link {
+      #email-button:link {
         text-decoration: none;
         
       }
@@ -104,6 +103,11 @@
       footer {
         text-align:center;
         margin: 70px 0px;
+      }
+
+      a {
+        color:rgb(9, 85, 136);
+        text-decoration: underline rgb(9, 85, 136);
       }
 
 
@@ -122,7 +126,7 @@
         <li id = "nav-item">Interests</li>
         <li id = "nav-item">Contact</li>
       </ul>
-      <img id = "hero" src = "profile.jpg">
+      <img id = "hero" src = "hero.jpg">
 
       <div>
         <h1 class = "section"> Hello, my name is John. I am a Data Engineer living in Cincinnati, OH</h1>
@@ -130,9 +134,9 @@
         <h3>About:</h3>
 
         <p>
-          Currently, I am working at Procter & Gamble as a Data Engineer in Edge Computing and Predictive Analytics. 
-          My passion is for making, leading, and learning. See my work experience on <a href="linkedin.com" target="_blank">LinkedIn</a>. Outside of work, I have a
-          beautiful fiance and wonderful friends. My side projects include freelance work for Complete Human Performance,
+          Currently, I am working at <a href = "https://us.pg.com/">Procter & Gamble</a> as a Data Engineer in Edge Computing and Predictive Analytics. 
+          My passion is for making, leading, and learning. See my work experience on <a href="http://www.linkedin.com/in/johngrinalds" target="_blank">LinkedIn</a>. Outside of work, I have a
+          beautiful fiance and wonderful friends. My side projects include freelance work for <a href = "https://completehumanperformance.com/">Complete Human Performance</a>,
           an ad-muter for Spotify, and a sunset-quality alert system. Don't hesitate to reach out with inquiries or
           if you just want to meet up and talk.
         </p>
@@ -141,7 +145,7 @@
 
         <h5>Data Engineering</h5>
 
-        <p>Extract Transform Load, data cleaning, data preparation, data storage and retrieval</p>
+        <p>Extract-transform-load, data cleaning, data preparation, data storage and retrieval</p>
 
         <h5>Data Science</h5>
 
@@ -154,8 +158,8 @@
       </div>
 
       <div>
-      <h1 class = "section">Interested in working together?
-        <a class = "email-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = '_blank'>Email Me &#8594</a>
+      <h1 class = "section">Interested in working together? <br><br>
+        <a id = "email-button" href="117b7e797f7663787f707d756251767c70787d3f727e7c" target = '_blank'>Email Me &#8594</a>
       </h1>
       </div>
 
@@ -167,6 +171,25 @@
         var d = new Date();
         dateEl = document.getElementById("date");
         dateEl.innerHTML = d.getFullYear();
+
+
+        // This code de-obfuscates the email address  
+        function decodeEmail(encodedString) {
+              var email = ""; 
+              var keyInHex = encodedString.substr(0, 2);
+              var key = parseInt(keyInHex, 16);
+              for (var n = 2; n < encodedString.length; n += 2) {
+                var charInHex = encodedString.substr(n, 2)
+                var char = parseInt(charInHex, 16);
+                var output = char ^ key;
+                email += String.fromCharCode(output);
+              }
+            return email;
+        }
+
+        var encodedEmail = document.getElementById("email-button");
+     
+        encodedEmail.href = "mailto:"+decodeEmail(encodedEmail.getAttribute("href"));
       </script>
       
  </body>
