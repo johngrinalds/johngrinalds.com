@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>John Grinalds</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel='icon' href='lighthouse.jpg'>
+    <link rel='icon' href='images/lighthouse.jpg'>
 
     <style>
       html {
@@ -47,9 +47,14 @@
 
       }
 
-      #nav-item { 
+      .nav-item { 
         display: inline;
         margin: 10px;
+      }
+
+      .nav-link {
+        color: white;
+        text-decoration: none;
       }
 
       li:hover {
@@ -87,6 +92,8 @@
         font-size: .5em;
         margin-left: 30px;
         transition-duration: 0.5s;
+        position: relative;
+        right: 11px;
       }
 
       #email-button:hover {
@@ -105,7 +112,7 @@
         margin: 70px 0px;
       }
 
-      a {
+      p a {
         color:rgb(9, 85, 136);
         text-decoration: underline rgb(9, 85, 136);
       }
@@ -117,16 +124,16 @@
   <body>
 
 
-      <img id = "logo" src="hatteras.jpg">
+      <a href="/index.html"><img id="logo" src="images/hatteras.jpg"></a>
 
 
 
       <ul id = "site-nav">
-        <li id = "nav-item"> Development</li>
-        <li id = "nav-item">Interests</li>
-        <li id = "nav-item">Contact</li>
+        <li class = "nav-item"><a class = "nav-link" href="/development.html">Development</a></li>
+        <li class = "nav-item"><a class = "nav-link" href="/interests.html">Interests</a></li>
+        <li class = "nav-item"><a class = "nav-link" href="/contact.html">Contact</a></li>
       </ul>
-      <img id = "hero" src = "hero.jpg">
+      <img id = "hero" src = "images/hero.jpg">
 
       <div>
         <h1 class = "section"> Hello, my name is John. I am a Data Engineer living in Cincinnati, OH</h1>
@@ -134,9 +141,9 @@
         <h3>About:</h3>
 
         <p>
-          Currently, I am working at <a href = "https://us.pg.com/">Procter & Gamble</a> as a Data Engineer in Edge Computing and Predictive Analytics. 
+          Currently, I am working at <a href = "https://us.pg.com/" target="_blank">Procter & Gamble</a> as a Data Engineer in Edge Computing and Predictive Analytics. 
           My passion is for making, leading, and learning. See my work experience on <a href="http://www.linkedin.com/in/johngrinalds" target="_blank">LinkedIn</a>. Outside of work, I have a
-          beautiful fiance and wonderful friends. My side projects include freelance work for <a href = "https://completehumanperformance.com/">Complete Human Performance</a>,
+          beautiful fiance and wonderful friends. My side projects include freelance work for <a href = "https://completehumanperformance.com/" target="_blank">Complete Human Performance</a>,
           an ad-muter for Spotify, and a sunset-quality alert system. Don't hesitate to reach out with inquiries or
           if you just want to meet up and talk.
         </p>

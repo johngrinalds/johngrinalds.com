@@ -1,1 +1,0 @@
-# johngrinalds.com
