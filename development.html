@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>John Grinalds</title>
+    <title>John Grinalds | Development</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel='icon' href='images/lighthouse.jpg'>
 
@@ -115,6 +115,13 @@
         
       }
 
+
+      .linkLogo {
+        position: relative;
+        top: 3px;
+        left: 2px;
+      }
+
       footer {
         text-align:center;
         margin: 70px 0px;
@@ -148,7 +155,7 @@
         <h1 class = "section">Development</h1>
 
         <h2>Github <a href="https://github.com/johngrinalds?tab=repositories" target = "_blank">
-          <img src="images/GitHub-Mark-64px.png" height=25px>
+          <img class = "linkLogo" src="images/GitHub-Mark-64px.png" height=25px>
           </a>
         </h2>
 
@@ -157,16 +164,18 @@
         <h3>Spotify Ad-Muter</h3>
 
         <p>
-          This is a simple Python script that uses the Spotipy API to listen for ads and mute and unmute your computer's volume accordingly.
+          This simple Python script uses the "Spotipy" library API to listen for ads and mute/unmute the computer's volume accordingly.
         </p>
 
         <h3>Sunset-alert System</h3>
 
-        <p>This is a Python job that pulls the current forecast from SunsetWX, evaluates the image for SW Ohio, and texts my phone if above a certain threshold.</p>
+        <p>This Python job pulls the current forecast from SunsetWX, evaluates the image for SW Ohio, and texts my phone if above a certain threshold. This is hosted
+          as a cloud function on Google Cloud Platform.
+        </p>
 
         <h3>Rent-Drive Calculator</h3>
 
-        <p>This is a very simple web-app that evaluates the utility of renting a car for a roadtrip versus just using your own personal car.</p>
+        <p>This very simple web-app evaluates the utility of renting a car for a roadtrip versus just using your own personal car.</p>
   
       </div>
 
