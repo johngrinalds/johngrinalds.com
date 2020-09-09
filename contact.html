@@ -140,9 +140,9 @@
       
 
         <h3>Email</h3>
-        <p>Email me at: 
+        <p>Email me 
           <a id="email-button" href="117b7e797f7663787f707d756251767c70787d3f727e7c" target='_blank'>
-            <span id = "emailAddress">117b7e797f7663787f707d756251767c70787d3f727e7c</span></p>
+            <span id = "emailAddress">here</span></p>
           </a>
 
 
@@ -187,11 +187,9 @@
             return email;
         }
 
-        var encodedEmail = document.getElementById("emailAddress");
         var encodedEmailLink = document.getElementById("email-button");
-        
-        encodedEmail.innerHTML = decodeEmail(encodedEmail.innerHTML);
-        encodedEmailLink.href = "mailto:" + encodedEmail.innerHTML;
+ 
+        encodedEmailLink.href = "mailto:" + decodeEmail(encodedEmailLink.getAttribute("href"));
 
 
       </script>
