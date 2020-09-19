@@ -1,198 +1,211 @@
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <meta charset="utf-8">
-    <title>John Grinalds | Contact</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel='icon' href='images/lighthouse.jpg'>
+<head>
 
-    <style>
-      html {
-        border: 5px solid black;
-        padding: 0px;
+  <meta charset="utf-8">
+  <title>John Grinalds | Contact</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel='icon' href='images/lighthouse.jpg'>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178391748-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-178391748-1');
+  </script>
+
+
+  <style>
+    html {
+      border: 5px solid black;
+      padding: 0px;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    #logo {
+      height: 50px;
+      position: absolute;
+      top: 50px;
+      left: 8%;
+      border: 1px solid black;
+      padding: 5px;
+      transition-duration: 0.4s;
+    }
+
+    #logo:hover {
+      transform: scale(1.15);
+    }
+
+    #openPl {
+      transition-duration: 0.4s;
+    }
+
+    #openPl:hover {
+      transform: scale(1.10);
+    }
+
+    #hero {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #site-nav {
+      position: absolute;
+      top: 35px;
+      right: 6%;
+      color: white;
+      list-style-type: none;
+      border: 1px solid black;
+      padding: 15px;
+
+    }
+
+    .nav-item {
+      display: inline;
+      margin: 10px;
+    }
+
+    .nav-link {
+      color: black;
+      text-decoration: none;
+    }
+
+    li:hover {
+      text-decoration: underline white;
+    }
+
+    #topBlank {
+      margin-top: 200px;
+    }
+
+    div {
+      margin: auto;
+      width: 65%;
+    }
+
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    h3 {
+      margin-top: 40px;
+    }
+
+    h5 {
+      color: rgb(9, 85, 136);
+    }
+
+    .section {
+      text-align: center;
+      margin: 30px 0px;
+      padding: 50px;
+      border-bottom: 3px solid black;
+      border-top: 3px solid black;
+    }
+
+    .linkLogo {
+      position: relative;
+      top: 3px;
+      left: 2px;
+    }
+
+
+    footer {
+      text-align: center;
+      margin: 70px 0px;
+    }
+
+    p a {
+      color: rgb(9, 85, 136);
+      text-decoration: underline rgb(9, 85, 136);
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <a href="/index.html"><img id="logo" src="images/hatteras.jpg"></a>
+
+
+
+  <ul id="site-nav">
+    <li class="nav-item"><a class="nav-link" href="/development.html">Development</a></li>
+    <li class="nav-item"><a class="nav-link" href="/interests.html">Interests</a></li>
+    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+  </ul>
+
+  <div id="topBlank"></div>
+
+  <div>
+    <h1 class="section">Contact</h1>
+
+
+    <h3>Email</h3>
+    <p>Email me
+      <a id="email-button" href="117b7e797f7663787f707d756251767c70787d3f727e7c" target='_blank'>
+        <span id="emailAddress">here</span></p>
+    </a>
+
+
+    <h3>LinkedIn <a href="http://www.linkedin.com/in/johngrinalds" target="_blank">
+        <img class="linkLogo" src="images/linked.png" height=25px>
+      </a>
+    </h3>
+
+
+
+    <h3>Github <a href="https://github.com/johngrinalds?tab=repositories" target="_blank">
+        <img class="linkLogo" src="images/GitHub-Mark-64px.png" height=25px>
+      </a>
+    </h3>
+
+
+
+  </div>
+
+
+  <footer>
+    <p>Copyright &#169 <span id="date"></span> John Grinalds</p>
+  </footer>
+
+  <script>
+    var d = new Date();
+    dateEl = document.getElementById("date");
+    dateEl.innerHTML = d.getFullYear();
+
+
+    // This code de-obfuscates the email address  
+    function decodeEmail(encodedString) {
+      var email = "";
+      var keyInHex = encodedString.substr(0, 2);
+      var key = parseInt(keyInHex, 16);
+      for (var n = 2; n < encodedString.length; n += 2) {
+        var charInHex = encodedString.substr(n, 2)
+        var char = parseInt(charInHex, 16);
+        var output = char ^ key;
+        email += String.fromCharCode(output);
       }
+      return email;
+    }
 
-      body {
-        font-family: 'Raleway', sans-serif;
-      }
+    var encodedEmailLink = document.getElementById("email-button");
 
-      #logo {
-        height: 50px;
-        position: absolute;
-        top: 50px;
-        left: 8%;
-        border: 1px solid black;
-        padding: 5px;
-        transition-duration: 0.4s;
-      }
-
-      #logo:hover {
-        transform: scale(1.15);
-      }
-
-      #openPl {
-        transition-duration: 0.4s;
-      }
-
-      #openPl:hover {
-        transform: scale(1.10);
-      }
-
-      #hero {
-       max-width: 100%;
-       height: auto; 
-      }
-
-      #site-nav {
-        position: absolute;
-        top: 35px;
-        right: 6%;
-        color: white;
-        list-style-type: none;
-        border: 1px solid black;
-        padding: 15px;
-
-      }
-
-      .nav-item { 
-        display: inline;
-        margin: 10px;
-      }
-
-      .nav-link {
-        color: black;
-        text-decoration: none;
-      }
-
-      li:hover {
-        text-decoration: underline white;
-      }
-
-      #topBlank {
-        margin-top:200px;
-      }
-
-      div {
-        margin: auto;
-        width: 65%;      
-      }
+    encodedEmailLink.href = "mailto:" + decodeEmail(encodedEmailLink.getAttribute("href"));
 
 
-      h2 {
-        margin-top: 40px;
-      }
+  </script>
 
-      h3 {
-        margin-top: 40px;
-      }
+</body>
 
-      h5 {
-        color:rgb(9, 85, 136);
-      }
-
-      .section {
-        text-align: center;
-        margin: 30px 0px;
-        padding: 50px;
-        border-bottom: 3px solid black;
-        border-top: 3px solid black;
-      }
-
-      .linkLogo {
-        position: relative;
-        top: 3px;
-        left: 2px;
-      }
-
-
-      footer {
-        text-align:center;
-        margin: 70px 0px;
-      }
-
-      p a {
-        color:rgb(9, 85, 136);
-        text-decoration: underline rgb(9, 85, 136);
-      }
-
-
-    </style>
-
-  </head>
-  <body>
-
-
-      <a href="/index.html"><img id="logo" src="images/hatteras.jpg"></a>
-
-
-
-      <ul id = "site-nav">
-        <li class = "nav-item"><a class = "nav-link" href="/development.html">Development</a></li>
-        <li class = "nav-item"><a class = "nav-link" href="/interests.html">Interests</a></li>
-        <li class = "nav-item"><a class = "nav-link" href="/contact.html">Contact</a></li>
-      </ul>
-
-      <div id = "topBlank"></div>
-
-      <div>
-        <h1 class = "section">Contact</h1>
-      
-
-        <h3>Email</h3>
-        <p>Email me 
-          <a id="email-button" href="117b7e797f7663787f707d756251767c70787d3f727e7c" target='_blank'>
-            <span id = "emailAddress">here</span></p>
-          </a>
-
-
-        <h3>LinkedIn <a href="http://www.linkedin.com/in/johngrinalds" target="_blank">
-            <img class = "linkLogo" src="images/linked.png" height=25px>
-          </a>
-        </h3>
-
-
-
-        <h3>Github <a href="https://github.com/johngrinalds?tab=repositories" target="_blank">
-            <img class = "linkLogo" src="images/GitHub-Mark-64px.png" height=25px>
-          </a>
-        </h3>
-
-
-  
-      </div>
-
-
-      <footer>
-        <p>Copyright &#169 <span id="date"></span> John Grinalds</p>
-      </footer>
-
-      <script>
-        var d = new Date();
-        dateEl = document.getElementById("date");
-        dateEl.innerHTML = d.getFullYear();
-
-
-        // This code de-obfuscates the email address  
-        function decodeEmail(encodedString) {
-              var email = ""; 
-              var keyInHex = encodedString.substr(0, 2);
-              var key = parseInt(keyInHex, 16);
-              for (var n = 2; n < encodedString.length; n += 2) {
-                var charInHex = encodedString.substr(n, 2)
-                var char = parseInt(charInHex, 16);
-                var output = char ^ key;
-                email += String.fromCharCode(output);
-              }
-            return email;
-        }
-
-        var encodedEmailLink = document.getElementById("email-button");
- 
-        encodedEmailLink.href = "mailto:" + decodeEmail(encodedEmailLink.getAttribute("href"));
-
-
-      </script>
-      
- </body>
 </html>
